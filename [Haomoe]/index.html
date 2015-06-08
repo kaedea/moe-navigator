@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta charset="GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>好萌导航,动漫导航 "HaoMoe(´• ω •｀)"ver0.9</title>
+	<meta name="Description" content="为您的二次元导航！追求简洁、科学、可爱的相结合！专注于高质量宅网站收录与发掘的动漫导航站，您的二次元专用导航姬！" />
+	<meta name="Keywords" content="动漫 导航 ACG 应用 开发 技术研究 汉化 日语 教程 里番 绅士 节操 网址导航 动漫网址导航 动漫网站推荐 2013 ACG AMV ANIME DOTA DOTA2 FREE GAL GALGAME GAME LOL MAD MTV MUGEN VOCALOID 东方 东方幻想乡 刀剑神域 初音 动漫 动漫新番 动漫音乐 动画 动画下载 匿名版 十万个冷笑话 喵星人 基佬 天下漫友是一家 弹幕 德玛西亚 我和我的小伙伴 新番 末日 洛天依 游戏 游戏解说 番组 英雄联盟 视频 认真你就输了 评论才是本体 进击的巨人 高清视频 鬼畜" />
+	<meta name="Author" content="kaede">
+    <link rel="stylesheet" href="css/metro.css">
+<link rel="shortcut icon" href="http://haomoe.org/images/favicon.ico">
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js" ></script>
+<!--解决在ie6下png透明-->
+<!--[if IE 6]>
+	<script type="text/javascript" src="script/DD_belatedPNG.js" ></script>	
+	<script type="text/javascript">
+	DD_belatedPNG.fix('ul li img');
+  DD_belatedPNG.fix('#search_button,background');
+  DD_belatedPNG.fix('#search_input,background');
+  DD_belatedPNG.fix('#top dl dt,background');
+	</script>
+<![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var box_h=$("#metro_box").height();
+            var box_w=$("#metro_box").width();
+            $("#metro_box").css("margin-top",(($(window).height()-box_h)/2)-10+"px");
+            //var img_h=$(".arr_left img").height();
+            //var img_w=$(".arr_left img").width();
+            //$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
+            //$(".next").css("position","absolute").css("right","10px").css("top",($(window).height()-img_h)/2);
+            //链接在新窗口打开
+            $(".a_link dd a").attr("target","_blank");
+            $(".a_link ul li>a").hover(function(){
+                var a_href=$(this).attr("href");			
+                $(this).siblings().find("a").attr("href",a_href);
+            });
+		
+            //切屏-----------------------------------------------------------------
+            $("#top dl dd a").click(function(){
+                var now_class=$(this).attr("class");	
+                $("#top dl dd a.a_index").attr("class","a_index");
+                $("#top dl dd a.a_mzdw").attr("class","a_mzdw");
+                $("#top dl dd a.a_spyy").attr("class","a_spyy");
+                $("#top dl dd a.a_xwzx").attr("class","a_xwzx");
+                $("#top dl dd a.a_gwtb").attr("class","a_gwtb");
+                $("#top dl dd a.a_yxyl").attr("class","a_yxyl");
+                $("#top dl dd a.a_sygj").attr("class","a_sygj");
+                $("#top dl dd a.a_yszy").attr("class","a_yszy");
+                $(this).attr("class",now_class).addClass(now_class+"_h");			
+                var index=$(this).index();
+                $("#metro_box dd").hide();
+                $("#metro_box dd").eq(index).toggle(100);
+                if(index==1){
+                    $("body").attr("class","bg0");
+                }
+                switch (index){
+                    case 0:
+                        $("body").attr("class","bg8");						
+                        break;
+                    case 1:
+                        $("body").attr("class","bg0");					
+                        break;
+                    case 2:
+                        $("body").attr("class","bg1");						
+                        break;
+                    case 3:
+                        $("body").attr("class","bg2");					
+                        break;
+                    case 4:
+                        $("body").attr("class","bg3");					
+                        break;
+                    case 5:
+                        $("body").attr("class","bg5");						
+                        break;	
+                    case 6:
+                        $("body").attr("class","bg4");						
+                        break;	
+                    case 7:
+                        $("body").attr("class","bg7");						
+                        break;	
+                    case 8:
+                        $("body").attr("class","bg8");						
+                        break;	
+                    default :
+                        $("body").attr("class","bg8");						
+                }
+			
+                <!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
+                });
+        });
+</script>
+
+ 
+</head>
+<body><!--style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg_01.jpg', sizingMethod='scale')"-->
+    <!--loading-->
+    <!--头部导航开始-->
+    <div id="top">
+        <dl>
+            <dt><a href="/wp" target="_blank"  title="好萌动漫资源分享">HaoMoe 好萌动漫</a></dt>
+            <dd>            
+                <a class="a_index" onclick="AddFavorite(window.location,document.title)" target="_self" title="收藏好萌">收藏好萌</a>
+                <a class="a_mzdw a_mzdw_h"  title="热门网站">动漫前线</a>
+                <a class="a_spyy"  title="在线新番 动漫社区">新番社区</a>
+                <a class="a_xwzx" title="在线漫画 福利萌图">漫画萌图</a>
+                <a class="a_gwtb" title="在线音乐 欢乐游戏">音乐游戏</a>
+                <a class="a_yxyl" title="正版周边 衬衫抱枕">糟糕绅士</a>
+                <a class="a_sygj"  title="好孩子 看不见">小众外网</a>
+                <a class="a_yszy"  title="三次元注意">手办周边</a>
+                <a class="a_more" title="更多福利">更多</a>
+            </dd>
+        </dl>
+    </div>
+    <!--头部导航结束-->
+    <!--logo区开始-->
+    <div id="metro_box" class="a_link">
+
+
+
+        <dl>
+            <dd style="display: none;"></dd>
+            <dd style="display: bolck;">
+                <!--动漫前线-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://www.acfun.tv">
+                        <img src="images/logo_a11.png" width="240" height="120" alt=""></a><span><a href="#">ACFUN 国内基佬文化的始祖</a></span></li>
+                    <li id="logo_002"><a href="http://www.baidu.com">
+                        <img src="images/logo_a12.png" width="240" height="120" alt=""></a><span><a href="#">傲娇度娘</a></span></li>
+                    <li id="logo_003"><a href="http://bilibili.tv">
+                        <img src="images/logo_a13.png" width="240" height="120" alt=""></a><span><a href="#">哔哩哔哩 国产弹幕第二家</a></span></li>
+                    <li class="four" id="logo_004"><a href="http://www.tucao.cc/">
+                        <img src="images/logo_a14.png" width="240" height="120" alt=""></a><span><a href="#">C站 低调的吐槽娘</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://h.acfun.tv/">
+                        <img src="images/logo_a21.png" width="240" height="120" alt=""></a><span><a href="#">A岛 丧失聚集地</a></span></li>
+                    <li id="logo_006"><a href="http://www.u17.com">
+                        <img src="images/logo_a22.png" width="239" height="120" alt=""></a><span><a href="#">有妖气 国产原创漫画先锋</a></span></li>
+                    <li id="logo_007"><a href="http://acg.178.com/">
+                        <img src="images/logo_a23.png" width="240" height="120" alt=""></a><span><a href="#">178动漫频道 最新动漫资讯</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://www.pixiv.net/">
+                        <img src="images/logo_a24.png" width="240" height="120" alt=""></a><span><a href="#">P站 触手诞生地</a></span></li>
+                    <li class="one" id="logo_009"><a href="https://yande.re/post">
+                        <img src="images/logo_a31.png" width="240" height="120" alt=""></a><span><a href="#">曾经的萌妹 如今的病娇</a></span></li>
+                    <li id="logo_010"><a href="http://cartoon.tudou.com/">
+                        <img src="images/logo_a32.png" width="240" height="120" alt=""></a><span><a href="#">土豆动漫频道 正版动画？</a></span></li>
+                    <li id="logo_011"><a href="http://www.nicovideo.jp/">
+                        <img src="images/logo_a33.png" width="240" height="120" alt=""></a><span><a href="#">NICONICO 弹幕网的始祖</a></span></li>
+                    <li class="four" id="logo_012"><a href="http://www.xiami.com/">
+                        <img src="images/logo_a34.png" width="240" height="120" alt=""></a><span><a href="#">虾米音乐 动漫音乐的圣地</a></span></li>
+                    <li class="one" id="logo_013"><a href="http://bt.ktxp.com/">
+                        <img src="images/logo_a41.png" width="240" height="120" alt=""></a><span><a href="#">极影BT 最新的动漫资源</a></span></li>
+                    <li id="logo_014"><a href="http://tieba.baidu.com/f?kw=%BA%F3%B9%AC%B6%AF%C2%FE">
+                        <img src="images/logo_a42.png" width="240" height="120" alt=""></a><span><a href="#">一如宫吧深似海 从此节操是路人</a></span></li>
+                    <li id="logo_015"><a href="http://www.rwdm.tv/">
+                        <img src="images/logo_a43.png" width="240" height="120" alt=""></a><span><a href="#">清新的在线动漫</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给“好萌”</a></span></li>
+                </ul>
+            </dd>
+
+            <dd style="display: none;">
+                <!--新番社区-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://donghua.dmzj.com/">
+                        <img src="images/logo_b11.png" width="240" height="120" alt=""></a><span><a href="#">动漫之家 在线动漫</a></span></li>
+                    <li id="logo_002"><a href="http://anime.kankan.com/">
+                        <img src="images/logo_b12.png" width="240" height="120" alt=""></a><span><a href="#">迅雷动漫 文艺的动漫小编</a></span></li>
+                    <li id="logo_003"><a href="http://www.iqiyi.com/dongman/">
+                        <img src="images/logo_b13.png" width="240" height="120" alt=""></a><span><a href="#">爱奇艺动漫 版权至上</a></span></li>
+                    <li class="four" id="logo_004"><a href="http://tieba.baidu.com/f?kw=bilibili">
+                        <img src="images/logo_b14.png" width="240" height="120" alt=""></a><span><a href="#">BILIBILI贴吧</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://www.emland.net/index.php">
+                        <img src="images/logo_b21.png" width="240" height="120" alt=""></a><span><a href="#">恶魔岛动漫社区</a></span></li>
+                    <li id="logo_006"><a href="http://www.lightnovel.cn/forum.php">
+                        <img src="images/logo_b22.png" width="240" height="120" alt=""></a><span><a href="#">轻之国度 小说党的圣地</a></span></li>
+                    <li id="logo_007"><a href="http://www.sosg.net/">
+                        <img src="images/logo_b23.png" width="240" height="120" alt=""></a><span><a href="#">SOSG动漫论坛 技术宅在此</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://bbs.dm123.cn/">
+                        <img src="images/logo_b24.png" width="240" height="120" alt=""></a><span><a href="#">动漫FANS 动漫论坛</a></span></li>
+                    <li class="one" id="logo_009"><a href="http://www.tsdm.net/">
+                        <img src="images/logo_b31.png" width="240" height="120" alt=""></a><span><a href="#">天使动漫 梦开始的地方</a></span></li>
+                    <li id="logo_010"><a href="http://www.h5galgame.com/">
+                        <img src="images/logo_b32.png" width="240" height="120" alt=""></a><span><a href="#">H5GAL游戏论坛</a></span></li>
+                    <li id="logo_011"><a href="http://www.galgame.net/bbs/">
+                        <img src="images/logo_b33.png" width="240" height="120" alt=""></a><span><a href="#">GALGAME美少女游戏联盟</a></span></li>
+                    <li class="four" id="logo_012"><a href="http://www.zodgame.org/">
+                        <img src="images/logo_b34.png" width="240" height="120" alt=""></a><span><a href="#">ZODGAME游戏论坛</a></span></li>
+                    <li class="one" id="logo_013"><a href="http://bbs.sumisora.org/">
+                        <img src="images/logo_b41.png" width="240" height="120" alt=""></a><span><a href="#">澄空学园 野生汉化组聚集地</a></span></li>
+                    <li id="logo_014"><a href="http://bbs.9gal.com/">
+                        <img src="images/logo_b42.png" width="240" height="120" alt=""></a><span><a href="#">绯月之下 苍雪飘零</a></span></li>
+                    <li id="logo_015"><a href="http://bbs.comicdd.com/">
+                        <img src="images/logo_b43.png" width="240" height="120" alt=""></a><span><a href="#">动漫东东 除了你自己啥都能萌化哦</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给"好萌"</a></span></li>
+                </ul>
+            </dd>
+            <dd style="display: none;">
+                <!--漫画萌图-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://www.dmzj.com/">
+                        <img src="images/logo_c11.png" width="240" height="120" alt=""></a><span><a href="#">动漫之家 支持下拉式漫画</a></span></li>
+                    <li id="logo_002"><a href="http://www.kkkmh.com/">
+                        <img src="images/logo_c12.png" width="240" height="120" alt=""></a><span><a href="#">极影漫画</a></span></li>
+                    <li id="logo_003"><a href="http://www.dm5.com/">
+                        <img src="images/logo_c13.png" width="240" height="120" alt=""></a><span><a href="#">动漫屋漫画</a></span></li>
+                    <li class="four" id="logo_004"><a href="http://www.cococomic.com/">
+                        <img src="images/logo_c14.png" width="240" height="120" alt=""></a><span><a href="#">可可擦边漫画</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://www.99comic.com/">
+                        <img src="images/logo_c21.png" width="240" height="120" alt=""></a><span><a href="#">久久擦边漫画</a></span></li>
+                    <li id="logo_006"><a href="http://tu.178.com/">
+                        <img src="images/logo_c22.png" width="240" height="120" alt=""></a><span><a href="#">178萌图库 各路萌图</a></span></li>
+                    <li id="logo_007"><a href="http://www.dm123.cn/ecms/pic/cg/">
+                        <img src="images/logo_c23.png" width="240" height="120" alt=""></a><span><a href="#">动漫FANS美图库</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://www.moecg.net/">
+                        <img src="images/logo_c24.png" width="240" height="120" alt=""></a><span><a href="#">MOECG美图</a></span></li>
+                    <li class="one" id="logo_009"><a href="http://www.mantuhui.com/">
+                        <img src="images/logo_c31.png" width="240" height="120" alt=""></a><span><a href="#">漫图汇 图片墙式</a></span></li>
+                    <li id="logo_010"><a href="http://worldcosplay.net/">
+                        <img src="images/logo_c32.png" width="240" height="120" alt=""></a><span><a href="#">World Cosplay网站</a></span></li>
+                    <li id="logo_011"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="four" id="logo_012"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="one" id="logo_013"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_014"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_015"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给"好萌"</a></span></li>
+                </ul>
+            </dd>
+            <dd style="display: none;">
+                <!--音乐游戏-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://www.kugou.com/">
+                        <img src="images/logo_d11.png" width="240" height="120" alt=""></a><span><a href="#">酷狗音乐</a></span></li>
+                    <li id="logo_002"><a href="http://y.qq.com/">
+                        <img src="images/logo_d12.png" width="240" height="120" alt=""></a><span><a href="#">QQ音乐</a></span></li>
+                    <li id="logo_003"><a href="http://moe.fm/">
+                        <img src="images/logo_d13.png" width="240" height="120" alt=""></a><span><a href="#">萌否电台</a></span></li>
+                    <li class="four" id="logo_004"><a href="http://www.xiami.com/">
+                        <img src="images/logo_d14.png" width="240" height="120" alt=""></a><span><a href="#">虾米乐音</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://www.17173.com/">
+                        <img src="images/logo_d21.png" width="240" height="120" alt=""></a><span><a href="#">17173 一起上</a></span></li>
+                    <li id="logo_006"><a href="http://www.duowan.com/">
+                        <img src="images/logo_d22.png" width="240" height="120" alt=""></a><span><a href="#">多玩游戏</a></span></li>
+                    <li id="logo_007"><a href="http://www.4399.com/">
+                        <img src="images/logo_d23.png" width="240" height="120" alt=""></a><span><a href="#">4399在线小游戏</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://www.acfun.tv/v/list71/index.htm">
+                        <img src="images/logo_d24.png" width="240" height="120" alt=""></a><span><a href="#">ACFUN游戏</a></span></li>
+                    <li class="one" id="logo_009"><a href="http://bbs.3dmgame.com/forum.php">
+                        <img src="images/logo_d31.png" width="240" height="120" alt=""></a><span><a href="#">3DM游戏论坛</a></span></li>
+                    <li id="logo_010"><a href="http://www.tgbus.com/">
+                        <img src="images/logo_d32.png" width="240" height="120" alt=""></a><span><a href="#">电玩巴士游戏论坛</a></span></li>
+                    <li id="logo_011"><a href="http://www.gamersky.com/">
+                        <img src="images/logo_d33.png" width="240" height="120" alt=""></a><span><a href="#">游民星空</a></span></li>
+                    <li class="four" id="logo_012"><a href="http://game.ali213.net/">
+                        <img src="images/logo_d34.png" width="240" height="120" alt=""></a><span><a href="#">游侠网游戏论坛</a></span></li>
+                    <li class="one" id="logo_013a"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_003"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_015a"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给"好萌"</a></span></li>
+                </ul>
+            </dd>
+            
+            <dd style="display: none;">
+                <!--捡回节操-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3D9U%252B9CpCm8AbghojqVNxKsQnSOncVI8jQog%252F3K1zSOxCLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f11b.png" width="240" height="120" alt=""></a><span><a href="#">初音 邪恶抱枕</a></span></li>
+                    <li id="logo_002"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DfdxYrg26olXebLdhAWchHH%252B1a2caECc0cd3R8ZkWJ%252FiLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f12b.png" width="240" height="120" alt=""></a><span><a href="#">弹丸论破 响子抱枕</a></span></li>
+                    <li id="logo_003"><a href="../bz">
+                        <img src="images/logo_f13.png" width="240" height="120" alt=""></a><span><a href="">最新抱枕、大全、定制</a></span></li>
+                    <li id="logo_004"><a href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB04MQzdgG69RGcaJQDLBg9qZF6A%2F0WB3rx3XOM5wOsqGPJPLyYXJv8d1XO5Eg%2B%2BRuil1x89AVVQPg%3D%3D">
+                        <img src="images/logo_f14.png" width="240" height="120" alt=""></a><span><a href="">绝对萌域动漫周边</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB04MQzdgG69RGcaJQDLBg9qZF6A%2F0WAQwLK%2Fa9b8MaheecXczZGPVZnfSs%2B3t2bCbQ%2Fo2xvDWzUMg%3D%3D">
+                        <img src="images/logo_f21.png" width="240" height="120" alt=""></a><span><a href="#">3-SEED动漫周边</a></span></li>
+                    <li id="logo_006"><a href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB04MQzdgG3VSuWRI1IF3n%2FzhWAzBtl8mRXX5nTtmIlCaju%2B9aiqmxJGY2GWppFyOhWJed1CHwYHZXrI">
+                        <img src="images/logo_f22.png" width="240" height="120" alt=""></a><span><a href="#">漫踪天猫旗舰店</a></span></li>
+                    <li id="logo_007"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3D%252B9qBnZt3Wg%252FebLdhAWchHF4VzX2CmMCVPKJZXwqcKKCLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f23.png" width="240" height="120" alt=""></a><span><a href="#">进击的巨人 卫衣</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3D5pmUe9qt2ErghojqVNxKsWGpUe%252BwXDBZEUtHUPud5YyLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f24.png" width="240" height="120" alt=""></a><span><a href="#">进击的巨人 T恤</a></span></li>
+                    <li class="one" id="logo_009"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DqSD2sXhuqyXebLdhAWchHKQXAWiKAB2JzXofVasUP7mLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f31.png" width="240" height="120" alt=""></a><span><a href="#">弹丸论破 KUMAT恤</a></span></li>
+                    <li id="logo_010"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DUo5Xo9q1L5febLdhAWchHE6FIIM%252B26O3LOEkXoxPQQaLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f32.png" width="240" height="120" alt=""></a><span><a href="#">中二病也要谈恋爱 T恤</a></span></li>
+                    <li id="logo_011"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DNHlGI6w7WRTebLdhAWchHDNIJqv73p9TZ6U672N6gVGLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f33.png" width="240" height="120" alt=""></a><span><a href="#">原版赛车手初音 手办</a></span></li>
+                    <li class="four" id="logo_012"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DZxiobzmaN1febLdhAWchHO8LIAr1GTmzwTF0nIgV33SLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f34.png" width="240" height="120" alt=""></a><span><a href="#">时崎狂三 卫衣</a></span></li>
+                    <li class="one" id="logo_013"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DOi%252F%252Bg%252Bxx9Z7ebLdhAWchHG13WHOLOAGkpvhC2iAi0c2LltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f41.png" width="240" height="120" alt=""></a><span><a href="#">时崎狂三 邪恶抱枕</a></span></li>
+                    <li id="logo_014"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DOfhmH67DzULebLdhAWchHNIq3xeFLaAHfiZgD4KXE7aLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f42.png" width="240" height="120" alt=""></a><span><a href="#">五河琴里 邪恶抱枕</a></span></li>
+                    <li id="logo_015"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3DdIqtrR9R205xqxxh9phdG587akT1af%252FZBRUm14q8OC%252FlL1tPWpvWRNSY3YY37eLzozyyspQmPJB2pCky7Qew4OIZWR1bMnHu%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f43.png" width="240" height="120" alt=""></a><span><a href="#">TENGA 宅男必备</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://redirect.simba.taobao.com/rd?w=unionnojs&f=http%3A%2F%2Fre.taobao.com%2Feauction%3Fe%3D5%252F%252BMh2eye6LghojqVNxKsaevUK00t7ynHnLSp9l07xyLltG5xFicOSZqewpHPyZzl68FqyDNvND1iQbGRhyIH1ZatX8ks5V8%26ptype%3D100010&k=e2e107a2b72ca1b1&c=un&b=alimm_0&p=mm_15388746_0_0">
+                        <img src="images/logo_f44.png" width="240" height="120" alt=""></a><span><a href="#">TOYSHEART 宅男必备</a></span></li>
+                </ul>
+            </dd>
+
+
+
+<dd style="display: none;">
+                <!--糟糕绅士-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://bt.orzx.co/">
+                        <img src="images/logo_e11.png" width="240" height="120" alt=""></a><span><a href="#">小撸怡情 大撸伤身</a></span></li>
+                    <li id="logo_002"><a href="http://bbs.soul-plus.net/">
+                        <img src="images/logo_e12.png" width="240" height="120" alt=""></a><span><a href="#">狂撸费血 豪撸断根</a></span></li>
+                    <li id="logo_003"><a href="http://ero4.us/">
+                        <img src="images/logo_e13.png" width="240" height="120" alt=""></a><span><a href="#">樯橹灰飞烟灭</a></span></li>
+                    <li class="four" id="logo_004"><a href="http://acgzone.us/">
+                        <img src="images/logo_e14.png" width="240" height="120" alt=""></a><span><a href="#">和谐区 密码你懂的</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://www.hacg.me/">
+                        <img src="images/logo_e21.png" width="240" height="120" alt=""></a><span><a href="#">琉璃神社</a></span></li>
+                    <li id="logo_006"><a href="http://sos117.com/">
+                        <img src="images/logo_e22.png" width="240" height="120" alt=""></a><span><a href="#">恶魔图书馆</a></span></li>
+                    <li id="logo_007"><a href="http://www.ikaros.cn/word/">
+                        <img src="images/logo_e23.png" width="240" height="120" alt=""></a><span><a href="#">幻想领域</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://www.oko.co/">
+                        <img src="images/logo_e24.png" width="240" height="120" alt=""></a><span><a href="#">纸玄论坛</a></span></li>
+                    <li class="one" id="logo_009"><a href="http://idoujin.com/">
+                        <img src="images/logo_e31.png" width="240" height="120" alt=""></a><span><a href="#">节操社</a></span></li>
+                    <li id="logo_010"><a href="http://aeshxanime.com/">
+                        <img src="images/logo_e32.png" width="240" height="120" alt=""></a><span><a href="#">AES绅士动漫画</a></span></li>
+                    <li id="logo_011"><a href="http://www.idanmu.com/">
+                        <img src="images/logo_e33.png" width="240" height="120" alt=""></a><span><a href="#">爱弹幕资源</a></span></li>
+                    <li class="four" id="logo_012"><a href="http://m.acgbt.com/">
+                        <img src="images/logo_e34.png" width="240" height="120" alt=""></a><span><a href="#">漫库</a></span></li>
+                    <li class="one" id="logo_013"><a href="http://www.kcjc.net/">
+                        <img src="images/logo_e41.png" width="240" height="120" alt=""></a><span><a href="#">四散的尘埃</a></span></li>
+                    <li id="logo_014"><a href="http://www.mracg.com/">
+                        <img src="images/logo_e42.png" width="240" height="120" alt=""></a><span><a href="#">萌日资源站</a></span></li>
+                    <li id="logo_015"><a href="http://liuchunfang.cn/">
+                        <img src="images/logo_e43.png" width="240" height="120" alt=""></a><span><a href="#">流春芳神社</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给"好萌"</a></span></li>
+                </ul>
+            </dd>
+            <dd style="display: none;">
+                <!--神器外网-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://www.okdvd.com/">
+                        <img src="images/logo_g11.png" width="240" height="120" alt=""></a><span><a href="#">葫芦娃退散</a></span></li>
+                    <li id="logo_002"><a href="http://jbpan.tk/">
+                        <img src="images/logo_g12.png" width="240" height="120" alt=""></a><span><a href="#">菊爆党西奈</a></span></li>
+                    <li id="logo_003"><a href="http://www.getchu.com/">
+                        <img src="images/logo_g13.png" width="240" height="120" alt=""></a><span><a href="#">最新美少女游戏动画资讯</a></span></li>
+                    <li class="four" id="logo_004"><a href="http://konachan.com/post">
+                        <img src="images/logo_g14.png" width="240" height="120" alt=""></a><span><a href="#">萌妹网之后的新秀</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://g.e-hentai.org/">
+                        <img src="images/logo_g21.png" width="240" height="120" alt=""></a><span><a href="#">写作绅士 读作HENTAI</a></span></li>
+                    <li id="logo_006"><a href="http://e-shuushuu.net/">
+                        <img src="images/logo_g22.png" width="240" height="120" alt=""></a><span><a href="#">国外专业萌图网</a></span></li>
+                    <li id="logo_007"><a href="http://www.zerochan.net/">
+                        <img src="images/logo_g23.png" width="240" height="120" alt=""></a><span><a href="#">国外高清萌图网</a></span></li>
+                    <li class="four" id="logo_008"><a href="http://amvnews.ru/">
+                        <img src="images/logo_g24.png" width="240" height="120" alt=""></a><span><a href="#">MAD技术宅前驱</a></span></li>
+                    <li class="one" id="logo_009"><a href="http://www.iqdb.org/">
+                        <img src="images/logo_g31.png" width="240" height="120" alt=""></a><span><a href="#">找图不求人</a></span></li>
+                    <li id="logo_010"><a href="http://www.141jav.com/">
+                        <img src="images/logo_g32.png" width="240" height="120" alt=""></a><span><a href="#">好孩子 看不见</a></span></li>
+                    <li id="logo_011"><a href="http://okinny.heypo.net/">
+                        <img src="images/logo_g33.png" width="240" height="120" alt=""></a><span><a href="#">就看看 不说话</a></span></li>
+                    <li class="four" id="logo_012"><a href="http://www.ms-pictures.com/top.html">
+                        <img src="images/logo_g34.png" width="240" height="120" alt=""></a><span><a href="#">11区的里番资讯</a></span></li>
+                    <li class="one" id="logo_013"><a href="http://www.donmai.us/">
+                        <img src="images/logo_g41.png" width="240" height="120" alt=""></a><span>国外萌图又一家</span></li>
+                    <li id="logo_014"><a href="http://chan.sankakucomplex.com/post/index">
+                        <img src="images/logo_g42.png" width="240" height="120" alt=""></a><span><a href="#">有GIF的萌图网</a></span></li>
+                    <li id="logo_015"><a href="http://www.rainymood.com/">
+                        <img src="images/logo_g43.png" width="240" height="120" alt=""></a><span><a href="#">雨声总能使人心情平静</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给"好萌"</a></span></li>
+                </ul>
+            </dd>
+
+            <dd style="display: none;">
+                <!--福利-->
+                <ul>
+                    <li class="one" id="logo_001"><a href="http://bbs.ivocaloid.com/">
+                        <img src="images/logo_h11.png" width="240" height="120" alt=""></a><span><a href="#">V家、MMD技术站</a></span></li>
+                    <li id="logo_002"><a href="http://bbs.66rpg.com/forum.php">
+                        <img src="images/logo_h12.png" width="240" height="120" alt=""></a><span><a href="#">RPG游戏开发</a></span></li>
+                    <li id="logo_003"><a href="http://www.nvlmaker.net/">
+                        <img src="images/logo_h13.png" width="240" height="120" alt=""></a><span><a href="#">GALGAME开发</a></span></li>
+                    <li class="four" id="logo_004"><a href="https://github.com/">
+                        <img src="images/logo_h14.png" width="240" height="120" alt=""></a><span><a href="#">大神们的盛宴</a></span></li>
+                    <li class="one" id="logo_005"><a href="http://wp.haomoe.org/pocket">
+                        <img src="images/logo_h21.png" width="240" height="120" alt=""></a><span><a href="#">好萌导航的资源宝库</a></span></li>
+                    <li id="logo_006"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_007"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="four" id="logo_008"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="one" id="logo_009"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_010"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_011"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="four" id="logo_012"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="one" id="logo_013a"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_003"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li id="logo_015a"><a href="">
+                        <img src="" width="240" height="120" alt=""></a><span><a href="#">推荐给好萌录入</a></span></li>
+                    <li class="four" id="logo_016"><a href="http://haomoe.org/wp/add/">
+                        <img src="images/logo_add.png" width="240" height="120" alt=""></a><span><a href="#">推荐优秀动漫网给"好萌"</a></span></li>
+                </ul>
+            </dd>
+
+
+
+
+        </dl>
+
+    </div>
+    <!--logo区结束-->
+
+    
+    <!--左右箭头开始-->
+    <!-- 
+    <div class="prev">
+        <img src="images/arr_left.png" width="31" height="67"></div>
+    <div class="next">
+        <img src="images/arr_right.png" width="31" height="67"></div>
+    --> 
+    <!--左右箭头结束-->
+  
+
+
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript" >
+var jiathis_config={
+	url:"http://haomoe.org/",
+	summary:"分享一个动漫导航网站：好萌导航(๑•́ ₃ •̀๑)",
+	title:"#动漫#",
+	pic:"http://moero.u.qiniudn.com/haomoecut2.jpg",
+	imageWidth:40,
+    marginTop:400,
+	imageUrl:"images/share.gif",
+	ralateuid:{
+		"tsina":"颜文字娘"
+	},
+	showClose:true,
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r.gif&move=0" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+<!-- 收藏 -->
+<script type="text/javascript"> 
+            function AddFavorite(sURL, sTitle) 
+            { 
+                try 
+                { 
+                    window.external.addFavorite(sURL, sTitle); 
+                } 
+                catch (e) 
+                { 
+                    try 
+                    { 
+                        window.sidebar.addPanel(sTitle, sURL, ""); 
+                    } 
+                    catch (e) 
+                    { 
+                        alert("加入收藏失败，请使用Ctrl+D进行添加"); 
+                    } 
+                } 
+            } 
+            function SetHome(obj,vrl){ 
+                try{ 
+                    obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl); 
+                } 
+                catch(e){ 
+                    if(window.netscape) { 
+                        try { 
+                            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); 
+                        } 
+                        catch (e) { 
+                            alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。"); 
+                        } 
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch); 
+                        prefs.setCharPref('browser.startup.homepage',vrl); 
+                    } 
+                } 
+            } 
+</script>
+
+
+
+
+<!-- 站长统计 -->
+<span style="display:none;">
+<script src="http://s22.cnzz.com/z_stat.php?id=1000110945&web_id=1000110945" language="JavaScript"></script>
+</body>
+</html>
