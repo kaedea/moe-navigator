@@ -13,7 +13,7 @@ html,body {/*<定义html和body高度都为100%，即显式定义html和body高�
 }   
 
 
-body{ background:#0C6D37 url(http://moeto.u.qiniudn.com/images/bg_01.jpg) no-repeat center center fixed;
+body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -59,47 +59,47 @@ body{ background:#0C6D37 url(http://moeto.u.qiniudn.com/images/bg_01.jpg) no-rep
 
 #metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto; }
 
-.bg0{ background:#93C5EA url(http://moeto.u.qiniudn.com/images/bg_01.jpg) no-repeat center center fixed;
+.bg0{ background:#93C5EA url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg1{ background:#93C5EA url(http://moeto.u.qiniudn.com/images/bg_02.jpg) no-repeat center center fixed;
+.bg1{ background:#93C5EA url(../images/bg_02.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg2{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_03.jpg) no-repeat center center fixed;
+.bg2{ background:#bdbac5 url(../images/bg_03.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg3{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_04.jpg) no-repeat center center fixed;
+.bg3{ background:#bdbac5 url(../images/bg_04.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg4{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_05.jpg) no-repeat center center fixed;
+.bg4{ background:#bdbac5 url(../images/bg_05.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg5{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_06.jpg) no-repeat center center fixed;
+.bg5{ background:#bdbac5 url(../images/bg_06.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg6{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_07.jpg) no-repeat center center fixed;
+.bg6{ background:#bdbac5 url(../images/bg_07.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg7{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_07.jpg) no-repeat center center fixed;
+.bg7{ background:#bdbac5 url(../images/bg_07.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-.bg8{ background:#bdbac5 url(http://moeto.u.qiniudn.com/images/bg_08.jpg) no-repeat center center fixed;
+.bg8{ background:#bdbac5 url(../images/bg_08.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
