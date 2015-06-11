@@ -26,7 +26,7 @@
         $(document).ready(function(){
             var box_h=$("#metro_box").height();
             var box_w=$("#metro_box").width();
-            $("#metro_box").css("margin-top",(($(window).height()-box_h)/2)-10+"px");
+            $("#tfheader").css("margin-top",(($(window).height()-box_h)/2)-70+"px");
             //var img_h=$(".arr_left img").height();
             //var img_w=$(".arr_left img").width();
             //$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
@@ -115,13 +115,21 @@
         </dl>
     </div>
     <!--头部导航结束-->
+    <!-- HTML for SEARCH BAR -->
+    <div id="tfheader">
+        <form id="tfnewsearch" method="get" action="http://www.google.com/search" target="google_window">
+                <input type="text" class="tftextinput" name="q" size="50" maxlength="120"><input type="submit" value="Google" class="tfbutton">
+        </form>
+        <div class="tfclear"></div>
+    </div>
     <!--logo区开始-->
-    <div id="metro_box" class="a_link">
+    <div id="metro_box" class="a_link" >
 
 
 
         <dl>
             <dd style="display: none;"></dd>
+
             <dd style="display: bolck;">
                 <!--动漫前线-->
                 <ul>
@@ -453,7 +461,7 @@ var jiathis_config={
 	title:"#动漫#",
 	pic:"http://moero.u.qiniudn.com/haomoecut2.jpg",
 	imageWidth:40,
-    marginTop:400,
+    marginTop:document.body.scrollHeight - 300,<!-- JiaThis 位置 -->
 	imageUrl:"images/share.gif",
 	ralateuid:{
 		"tsina":"颜文字娘"

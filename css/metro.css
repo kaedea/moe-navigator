@@ -27,6 +27,7 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
 	overflow:hidden;
 	padding:10px 0;
 }
+
 #top dl{ width:990px; margin:0 auto;}
 #top dl dt{ float:left; background:url(../images/img_split.png) no-repeat 0 0; width:250px; height:40px;}
 #top dl dt a{
@@ -57,7 +58,76 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
 .a_yszy_h{ width:79px; height:39px; background:url(../images/img_split.png) no-repeat -636px -175px;}
 .a_more{width:33px; height:39px; background:url(../images/img_split.png) no-repeat -740px -96px;}
 
-#metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto; }
+#search_bar{
+	height:39px;
+	line-height:39px;
+	width:100%;
+	background:url(../images/top_bg.png) repeat-x left top;
+	overflow:hidden;
+	padding:10px 0;
+	margin-top:180px;
+}
+
+
+
+
+
+#tfheader{
+		background-color:#00c3dfef;
+		margin:0px auto;  
+        text-align:center; 
+        margin-top:140px;  
+	}
+	#tfnewsearch{
+		padding:0px;
+
+
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:3px solid #0095cd; border-right:0px;
+		border-top-left-radius: 2px 2px;
+		border-bottom-left-radius: 2px 2px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 3px #0095cd; border-left:0px;
+		background: #0095cd;
+		/*background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);*/
+		border-top-right-radius: 1px 1px;
+		border-bottom-right-radius: 1px 1px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		border: solid 3px#007ead; border-left:0px;
+		/*background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);*/
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+
+
+
+
+#metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto;margin-top:60px; }
 
 .bg0{ background:#93C5EA url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
