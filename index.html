@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="unicode">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <title>好萌导航,动漫导航 "HaoMoe(´• ω •｀)"ver0.9</title>
 	<meta name="Description" content="为您的二次元导航！追求简洁、科学、可爱的相结合！专注于高质量宅网站收录与发掘的动漫导航站，您的二次元专用导航姬！" />
@@ -23,10 +23,22 @@
 <![endif]-->
 
     <script type="text/javascript">
-        $(document).ready(function(){
+       $(window).resize(function() {
+
             var box_h=$("#metro_box").height();
             var box_w=$("#metro_box").width();
-            $("#tfheader").css("margin-top",(($(window).height()-box_h)/2)-70+"px");
+            $("#tfheader").css("margin-top",  (document.body.scrollHeight - box_h - 140)/2 + "px");
+            /*$("#metro_box").css("margin-top",  (document.body.scrollHeight)/15 + "px");
+            */
+
+        });
+
+        $(document).ready(function(){
+
+            var box_h=$("#metro_box").height();
+            var box_w=$("#metro_box").width();
+            $("#tfheader").css("margin-top",  (document.body.scrollHeight - box_h - 140)/2 + "px");
+           /* $("#metro_box").css("margin-top",  (document.body.scrollHeight)/15 + "px");*/
             //var img_h=$(".arr_left img").height();
             //var img_w=$(".arr_left img").width();
             //$(".prev").css("position","absolute").css("left","10px").css("top",($(window).height()-img_h)/2);
@@ -461,7 +473,7 @@ var jiathis_config={
 	title:"#动漫#",
 	pic:"http://moero.u.qiniudn.com/haomoecut2.jpg",
 	imageWidth:40,
-    marginTop:document.body.scrollHeight - 300,<!-- JiaThis 位置 -->
+    marginTop:  $(window).height() - 300,<!-- JiaThis 位置 -->
 	imageUrl:"images/share.gif",
 	ralateuid:{
 		"tsina":"颜文字娘"

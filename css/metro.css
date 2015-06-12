@@ -10,6 +10,8 @@ html,body {/*<定义html和body高度都为100%，即显式定义html和body高�
 #content {/*<定义父元素显示属性>*/  
     height:100%;/*满屏显示*/  
     background: #FFFFFF;/*背景色*/  
+    min-height: 1080px;
+   height:auto ;
 }   
 
 
@@ -17,7 +19,11 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;}
+  background-size: cover;
+  height:100%;/*满屏显示*/  
+    min-height: 500px;
+   height:auto ;
+}
   
 #top{
 	height:39px;
@@ -57,18 +63,6 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
 .a_yszy{ width:79px; height:39px; background:url(../images/img_split.png) no-repeat -636px -96px;}
 .a_yszy_h{ width:79px; height:39px; background:url(../images/img_split.png) no-repeat -636px -175px;}
 .a_more{width:33px; height:39px; background:url(../images/img_split.png) no-repeat -740px -96px;}
-
-#search_bar{
-	height:39px;
-	line-height:39px;
-	width:100%;
-	background:url(../images/top_bg.png) repeat-x left top;
-	overflow:hidden;
-	padding:10px 0;
-	margin-top:180px;
-}
-
-
 
 
 
@@ -127,7 +121,7 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
 
 
 
-#metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto;margin-top:60px; }
+#metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto;margin-top:40px; }
 
 .bg0{ background:#93C5EA url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
