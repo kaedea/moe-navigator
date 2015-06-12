@@ -22,6 +22,11 @@
 	</script>
 <![endif]-->
 
+
+
+
+
+
     <script type="text/javascript">
        $(window).resize(function() {
 
@@ -102,12 +107,15 @@
 			
                 <!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
                 });
+
+
+             $("q").focus();
         });
 </script>
 
  
 </head>
-<body><!--style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg_01.jpg', sizingMethod='scale')"-->
+<body ONLOAD="window.document.forms[0].q.focus();"> <!--style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/bg_01.jpg', sizingMethod='scale')"-->
     <!--loading-->
     <!--头部导航开始-->
     <div id="top">
@@ -130,7 +138,7 @@
     <!-- HTML for SEARCH BAR -->
     <div id="tfheader">
         <form id="tfnewsearch" method="get" action="http://www.google.com/search" target="google_window">
-                <input type="text" class="tftextinput" name="q" size="50" maxlength="120"><input type="submit" value="Google" class="tfbutton">
+                <input type="text" class="tftextinput" name="q" size="50" maxlength="120"  tabindex="1" ><input type="submit" value="Google" class="tfbutton"  tabindex="2">
         </form>
         <div class="tfclear"></div>
     </div>
@@ -465,26 +473,30 @@
   
 
 
+
 <!-- JiaThis Button BEGIN -->
 <script type="text/javascript" >
 var jiathis_config={
-	url:"http://haomoe.org/",
-	summary:"分享一个动漫导航网站：好萌导航(๑•́ ₃ •̀๑)",
-	title:"#动漫#",
-	pic:"http://moero.u.qiniudn.com/haomoecut2.jpg",
-	imageWidth:40,
+    url:"http://haomoe.org/",
+    summary:"分享一个动漫导航网站：好萌导航(๑•́ ₃ •̀๑)",
+    title:"#动漫#",
+    pic:"http://moero.u.qiniudn.com/haomoecut2.jpg",
+    imageWidth:40,
     marginTop:  $(window).height() - 300,<!-- JiaThis 位置 -->
-	imageUrl:"images/share.gif",
-	ralateuid:{
-		"tsina":"颜文字娘"
-	},
-	showClose:true,
-	shortUrl:false,
-	hideMore:false
+    imageUrl:"images/share.gif",
+    ralateuid:{
+        "tsina":"颜文字娘"
+    },
+    showClose:true,
+    shortUrl:false,
+    hideMore:false
 }
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?btn=r.gif&move=0" charset="utf-8"></script>
 <!-- JiaThis Button END -->
+
+
+
 
 
 <!-- 收藏 -->
