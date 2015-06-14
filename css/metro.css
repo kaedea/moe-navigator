@@ -8,20 +8,20 @@ html,body {/*<定义html和body高度都为100%，即显式定义html和body高�
 }   
   
 #content {/*<定义父元素显示属性>*/  
-    height:100%;/*满屏显示*/  
     background: #FFFFFF;/*背景色*/  
-    min-height: 1080px;
-   height:auto ;
+       height:100%;/*满屏显示*/  
+
 }   
 
 
-body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
+body{ 
+	background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:100%;/*满屏显示*/  
-    min-height: 500px;
+   -o-background-size: cover;
+   background-size: cover;
+       height:100%;/*满屏显示*/  
+   min-height: 500px;
    height:auto ;
 }
   
@@ -70,7 +70,7 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
 		background-color:#00c3dfef;
 		margin:0px auto;  
         text-align:center; 
-        margin-top:140px;  
+        margin-top:30px;  
 	}
 	#tfnewsearch{
 		padding:0px;
@@ -123,7 +123,7 @@ body{ background:#0C6D37 url(../images/bg_01.jpg) no-repeat center center fixed;
 
 
 
-#metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto;margin-top:40px; }
+#metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto;margin-top:20px; }
 
 .bg0{ background:#93C5EA url(../images/bg_01.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
