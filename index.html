@@ -32,7 +32,12 @@
 
             var box_h=$("#metro_box").height();
             var box_w=$("#metro_box").width();
-            $("#tfheader").css("margin-top",  (document.body.scrollHeight - box_h - 100)/2 + "px");
+
+            var body = document.body,
+            html = document.documentElement;
+            var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+            $("#searchwrapper").css("margin-top",  (height - box_h - 100)/2 + "px");
             /*$("#metro_box").css("margin-top",  (document.body.scrollHeight)/15 + "px");
             */
 
@@ -42,7 +47,12 @@
 
             var box_h=$("#metro_box").height();
             var box_w=$("#metro_box").width();
-            $("#tfheader").css("margin-top",  (document.body.scrollHeight - box_h - 100)/2 + "px");
+
+            var body = document.body,
+            html = document.documentElement;
+            var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+            $("#searchwrapper").css("margin-top",  (height - box_h - 100)/2 + "px");
            /* $("#metro_box").css("margin-top",  (document.body.scrollHeight)/15 + "px");*/
             //var img_h=$(".arr_left img").height();
             //var img_w=$(".arr_left img").width();
@@ -135,13 +145,27 @@
         </dl>
     </div>
     <!--头部导航结束-->
-    <!-- HTML for SEARCH BAR -->
+
+
+    <!-- HTML for SEARCH BAR
     <div id="tfheader">
         <form id="tfnewsearch" method="get" action="http://www.google.com/search" target="google_window">
                 <input type="text" class="tftextinput" name="q" size="50" maxlength="120"  tabindex="1" ><input type="submit" value="Google" class="tfbutton"  tabindex="2">
         </form>
         <div class="tfclear"></div>
-    </div>
+    </div> -->
+
+       <div id="searchwrapper">  
+            <div class="search">  
+                <form id="tfnewsearch" method="get" action="http://www.google.com/search" target="google_window">
+                <input class="text" type="text" name="q" />  
+                <input class="button" type="submit" value="Google" />  
+                 </form>
+            </div>  
+        </div> 
+   <!-- HTML for SEARCH BAR END -->
+
+
     <!--logo区开始-->
     <div id="metro_box" class="a_link" >
 

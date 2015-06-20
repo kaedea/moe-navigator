@@ -122,6 +122,69 @@ body{
 
 
 
+#searchwrapper {        
+    width:100%;
+    margin:0px auto;  
+        text-align:center; 
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+
+        margin-top:30px;  
+        }  
+        .search {  
+            width: 494px;  
+            height: 30px;  
+            border: 3px solid #E4393C;  
+            position: relative;  
+        }  
+        .search input {  
+            float: left;  
+            border: 0;  
+        }  
+        input:focus {  
+            outline: 0;  
+        }  
+        .text {  
+            float: left;  
+            width: 406px;  
+            padding: 5px;  
+            height: 20px;  
+            line-height: 20px;  
+            font-family: arial,"\5b8b\4f53";  
+        }  
+        .text:focus {  
+            background-color: #FCFCFC;  
+            -webkit-box-shadow: 2px 2px 3px #D2D2D2 inset;  
+            -moz-box-shadow: 2px 2px 3px #D2D2D2 inset;  
+            box-shadow: 2px 2px 3px #D2D2D2 inset;  
+        }  
+        .button {  
+            width: 78px;  
+            height: 30px;  
+            font-size: 14px;  
+            font-weight: 700;  
+            color: #FFFFFF;  
+            background-color: #E4393C;  
+            display: inline-block;  
+            text-align: center;  
+            cursor: pointer;  
+        }  
+
+
+
 
 #metro_box{ width:990px; height:565px; overflow:hidden; margin:0 auto;margin-top:20px; }
 
