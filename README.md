@@ -1,2 +1,7 @@
-#HaoMoe Nijigen Website Navigator
-![demo](https://lh3.googleusercontent.com/-ui19f9I_ebI/VXhOORKcafI/AAAAAAAABEI/DmKxGzb-iE8/s800/QQ%25E6%2588%25AA%25E5%259B%25BE20150610224527.jpg)
+#Metro-like Website Navigator 
+##Introduce
+A Metro-like Website Navigator for NICHIGEN websites.
+##Demo
+[HaoMoe Navigator](http://moe.kaedea.com/)
+
+![enter image description here](https://lh3.googleusercontent.com/-VW8w3UnFrOc/VYUo8ZvQrCI/AAAAAAAABEk/uE5TCCgAlV0/s800/moenavigator.png "moenavigator.png")
