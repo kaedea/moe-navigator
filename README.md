@@ -1,4 +1,3 @@
-#Metro-like Website Navigator 
 ##Introduce
 A Metro-like Website Navigator for NICHIGEN websites.
 ##Demo
