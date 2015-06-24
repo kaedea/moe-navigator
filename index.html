@@ -43,8 +43,7 @@
 
         });
 
-        $(document).ready(function(){
-            setCookie("tab","0");   
+        $(document).ready(function(){ 
 
             var box_h=$("#metro_box").height();
             var box_w=$("#metro_box").width();
@@ -66,8 +65,6 @@
                 $(this).siblings().find("a").attr("href",a_href);
             });
 
-            setCookie("name","hayden"); 
-alert(getCookie("name")); 
 
             var tab = getCookie("tab");
             if (tab==1) {
@@ -95,11 +92,11 @@ alert(getCookie("name"));
                 switch (index){
                     case 0:
                         $("body").attr("class","bg8");	
-                        setCookie("tab","0");					
+                        setCookie("tab",0);					
                         break;
                     case 1:
                         $("body").attr("class","bg0");	
-                        setCookie("tab","1");     				
+                        setCookie("tab",1);     				
                         break;
                     case 2:
                         $("body").attr("class","bg1");						
