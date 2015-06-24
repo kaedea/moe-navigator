@@ -188,6 +188,13 @@ body{
         	background-color: #E91E63;  
         }
 
+/*target only firefox*/
+@-moz-document url-prefix() {
+  .search {  
+            width: 520px;  
+        }  
+}
+
 
 
 
