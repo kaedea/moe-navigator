@@ -68,7 +68,7 @@
 
             var tab = getCookie("tab");
             if (tab==1) {
-                $('.a_yxyl').trigger('click')
+                $('.a_yxyl').trigger('click');
             };
 		
             //切屏-----------------------------------------------------------------
@@ -88,45 +88,53 @@
                 $("#metro_box dd").eq(index).toggle(100);
                 if(index==1){
                     $("body").attr("class","bg0");
+                    setCookie("tab","0");
                 }
                 switch (index){
                     case 0:
                         $("body").attr("class","bg8");	
-                        setCookie("tab","0");					
+                        setCookie("tab","8");					
                         break;
                     case 1:
                         $("body").attr("class","bg0");	
-                        setCookie("tab","1");     				
+                        setCookie("tab","0");     				
                         break;
                     case 2:
                         $("body").attr("class","bg1");	
-                        setCookie("tab","2"); 					
+                        setCookie("tab","1"); 					
                         break;
                     case 3:
                         $("body").attr("class","bg2");	
-                        setCookie("tab","3"); 				
+                        setCookie("tab","2"); 				
                         break;
                     case 4:
-                        $("body").attr("class","bg3");					
+                        $("body").attr("class","bg3");	
+                        setCookie("tab","3");				
                         break;
                     case 5:
-                        $("body").attr("class","bg5");						
+                        $("body").attr("class","bg5");	
+                        setCookie("tab","5");					
                         break;	
                     case 6:
-                        $("body").attr("class","bg4");						
+                        $("body").attr("class","bg4");	
+                        setCookie("tab","4");					
                         break;	
                     case 7:
-                        $("body").attr("class","bg7");						
+                        $("body").attr("class","bg7");	
+                        setCookie("tab","7");					
                         break;	
                     case 8:
-                        $("body").attr("class","bg8");						
+                        $("body").attr("class","bg8");
+                        setCookie("tab","8");						
                         break;	
                     default :
-                        $("body").attr("class","bg8");						
+                        $("body").attr("class","bg8");
+                        setCookie("tab","8");						
                 }
 			
                 <!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
                 });
+                
 
               /*document.getElementById('a_yszy').click();*/
         });
