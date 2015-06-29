@@ -66,12 +66,6 @@
             });
 
 
-            var tab = getCookie("tab");
-            if (tab==1) {
-                $('.a_yxyl').trigger('click');
-                alert("1");
-            };
-		
             //切屏-----------------------------------------------------------------
             $("#top dl dd a").click(function(){
                 var now_class=$(this).attr("class");	
@@ -137,6 +131,11 @@
                 });
                 
 
+            var tab = getCookie("tab");
+            if (tab==1) {
+                $('.a_yxyl').trigger('click');
+                //alert("1");
+            };
               /*document.getElementById('a_yszy').click();*/
         });
 </script>
