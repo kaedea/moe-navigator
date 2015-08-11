@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/metro.css">
 <link rel="shortcut icon" href="images/favicon.ico">
 <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js" ></script>
+
 <!--解决在ie6下png透明-->
 <!--[if IE 6]>
 	<script type="text/javascript" src="script/DD_belatedPNG.js" ></script>	
@@ -21,10 +22,6 @@
   DD_belatedPNG.fix('#top dl dt,background');
 	</script>
 <![endif]-->
-
-
-
-
 
 
     <script type="text/javascript">
@@ -65,8 +62,7 @@
                 $(this).siblings().find("a").attr("href",a_href);
             });
 
-
-            //切屏-----------------------------------------------------------------
+            //切屏
             $("#top dl dd a").click(function(){
                 var now_class=$(this).attr("class");	
                 $("#top dl dd a.a_index").attr("class","a_index");
@@ -127,7 +123,7 @@
                         setCookie("tab","8");						
                 }
 			
-                <!--[if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif]-->			
+                <!-- [if IE 6]>$("#metro_box dd").eq(index).show(300);<![endif] -->			
                 });
                 
 
